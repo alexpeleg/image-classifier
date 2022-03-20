@@ -37,8 +37,8 @@ def predict_animal(file, model, labelnames):
     print(label_index)
     acc=np.max(score)
     animal=labelnames.get(str(label_index))
+    print("The predicted interface is a %s with accuracy =    %s" % (animal, str(acc)))
     print(animal)
-    print("The predicted Animal is a %s with accuracy =    %s" % (animal, str(acc)))
 
 def main():
     try:
