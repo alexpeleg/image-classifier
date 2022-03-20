@@ -6,7 +6,7 @@ image classifier based on keras and tensorflow
 
 ## Install
 ```
-docker pull alexpeleg/image-classifier
+docker pull alexpeleg/classify
 ```
 
 ## Creating trainning data
