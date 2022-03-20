@@ -28,8 +28,10 @@ jobs:
         with:
           context: ./
           file: ./Dockerfile
-          builder: ${{ steps.buildx.outputs.name }}
-          push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/classify:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/classify:buildcache
+      - 
+        name: Build the Docker image
+        run: docker build . --file Dockerfile --alexpeleg/image-classifier:$(date +%s)
+        push: true
+        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/classify:latest
+        cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/classify:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/classify:buildcache,mode=max
