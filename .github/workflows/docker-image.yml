@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag alexpeleg/image-classifier:$(date +%s)
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/classify
+      run: docker push alexpeleg/classify:tagname
