@@ -6,7 +6,7 @@ image classifier based on keras and tensorflow
 
 ## Install
 ```
-docker pull javasoze/image-classifier
+docker pull alexpeleg/image-classifier
 ```
 
 ## Creating trainning data
@@ -74,3 +74,4 @@ python predict.py -m /models -f /input/kitten.jpeg
 
 ## Credits
 * Model and sample code taken from Divyanshu Sundriyal's Blog (https://medium.com/@divyanshuDeveloper/a-simple-animal-classifier-from-scratch-using-keras-61ef0edfcb1f)
+* javasoze
